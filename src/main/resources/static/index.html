@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AngularJs Example</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="bower_components/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body ng-app="angularExampleApp">
+<div ng-controller="MainCtrl" class="search">
+    <input type="checkbox" id="trigger" class="search__checkbox"/>
+    <label class="search__label-init" for="trigger"></label>
+    <label class="search__label-active" for="trigger"></label>
+    <div class="search__border"></div>
+    <input ng-model="country" auto-complete country="country"
+           placeholder="example: Poland" class="search__input" role="textbox" autocomplete="off">
+    <div class="search__close"></div>
+</div>
+
+<script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/controllers/main.js"></script>
+<script type="text/javascript" src="scripts/factories/autocomplete-data.js"></script>
+<script type="text/javascript" src="scripts/directives/autocomplete.js"></script>
+<script type="text/javascript" src="bower_components/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+</body>
+</html>

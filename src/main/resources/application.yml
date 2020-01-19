@@ -1,0 +1,8 @@
+server:
+  port: ${PORT:9999}
+
+database:
+  countries:
+    - alpha2Code: PL
+      name: Poland
+
