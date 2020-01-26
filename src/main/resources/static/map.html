@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="App">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+</head>
+
+<body ng-controller="MapCtrl">
+<nav class="navbar navbar-light">
+  <div class="container"></div>
+</nav>
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-12">
+          <form class="form-inline w-75 mx-auto">
+            <div class="input-group w-100">
+              <input ng-model="country" auto-complete country="country"
+                     placeholder="example: Poland" class="form-control" role="textbox" autocomplete="off">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 mx-auto mt-5">
+        <section id="map">
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/controllers/map.js"></script>
+<script type="text/javascript" src="scripts/factories/autocomplete-data.js"></script>
+<script type="text/javascript" src="scripts/directives/autocomplete.js"></script>
+<script type="text/javascript" src="bower_components/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+</body>
+</html>

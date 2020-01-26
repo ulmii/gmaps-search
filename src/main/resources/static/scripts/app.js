@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('angularExampleApp', [
+  .module('App', [
     'ngRoute'
   ])
   .config(function ($routeProvider, $locationProvider) {

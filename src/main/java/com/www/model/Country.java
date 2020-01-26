@@ -18,4 +18,5 @@ public class Country
     @Id
     private String alpha2Code;
     private String name;
+    private String capital;
 }

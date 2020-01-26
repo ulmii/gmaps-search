@@ -13,21 +13,21 @@ import org.springframework.context.annotation.Bean;
 
 @EnableCircuitBreaker
 @SpringBootApplication
-public class AngularjsApplication
+public class WWWApplication
 {
-    private static final Logger log = LoggerFactory.getLogger(AngularjsApplication.class);
+    private static final Logger log = LoggerFactory.getLogger(WWWApplication.class);
 
     private LoaderService loaderService;
 
     @Autowired
-    public AngularjsApplication(LoaderService loaderService)
+    public WWWApplication(LoaderService loaderService)
     {
         this.loaderService = loaderService;
     }
 
     public static void main(String[] args)
     {
-        SpringApplication.run(AngularjsApplication.class, args);
+        SpringApplication.run(WWWApplication.class, args);
     }
 
     @Bean

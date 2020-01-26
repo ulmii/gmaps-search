@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('angularExampleApp')
+angular.module('App')
     .factory('autoCompleteDataService', ['$http', function ($http) {
         return {
             search: function (country) {
-                return $http.get("/autocomplete?country=" + country).then(function (response) {
+                return $http.get("/countries?country=" + country).then(function (response) {
                     return response.data;
                 });
             }

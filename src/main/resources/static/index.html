@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="styles/index.css">
 </head>
 
-<body ng-app="angularExampleApp">
+<body ng-app="App">
 <div ng-controller="MainCtrl" class="search">
     <input type="checkbox" id="trigger" class="search__checkbox"/>
     <label class="search__label-init" for="trigger"></label>
     <label class="search__label-active" for="trigger"></label>
     <div class="search__border"></div>
-    <input ng-model="country" auto-complete country="country"
+    <input ng-keypress="getCountry($event)" ng-model="countryName" auto-complete country-name="countryName"
            placeholder="example: Poland" class="search__input" role="textbox" autocomplete="off">
     <div class="search__close"></div>
 </div>
@@ -28,6 +28,5 @@
 <script type="text/javascript" src="scripts/factories/autocomplete-data.js"></script>
 <script type="text/javascript" src="scripts/directives/autocomplete.js"></script>
 <script type="text/javascript" src="bower_components/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-
 </body>
 </html>

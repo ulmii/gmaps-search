@@ -1,11 +1,12 @@
 'use strict';
 
-angular.module('angularExampleApp')
+angular.module('App')
     .directive('autoComplete', ['autoCompleteDataService', function (autoCompleteDataService) {
         return {
             restrict: 'A',
             scope: {
-                country: '='
+                countryName: '=',
+                selectedCountry: '='
             },
             link: function (scope, elem) {
                 elem.autocomplete({
@@ -13,7 +14,8 @@ angular.module('angularExampleApp')
                         autoCompleteDataService.search(searchTerm.term).then(function (autocompleteResults) {
                             response($.map(autocompleteResults, function (autocompleteResult) {
                                 return {
-                                    value: autocompleteResult
+                                    value: autocompleteResult.name,
+                                    country: autocompleteResult
                                 }
                             }))
                         });
@@ -21,7 +23,12 @@ angular.module('angularExampleApp')
                     minLength: 1,
                     select: function (event, selectedItem) {
                         event.stopPropagation();
-                        scope.country = selectedItem.item.value;
+                        var scope = angular.element($("div[ng-controller='MainCtrl']")).scope();
+                        scope.$apply(function () {
+                            console.log("selected: " + selectedItem.item.country);
+                            scope.selectedCountry = selectedItem.item.country;
+                        });
+                        scope.countryName = selectedItem.item.value;
                         scope.$apply();
                     }
                 })
