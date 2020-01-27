@@ -10,7 +10,7 @@ angular.module('App')
         var html = '<iframe \
       width="1200" \
       height="700" \
-      frameborder="0" style="border:0" \
+      style="border:0" \
       src="' + mapsUrl + '" allowfullscreen></iframe>';
 
         angular.element(document.querySelector('#map')).append($compile(html)($scope));
